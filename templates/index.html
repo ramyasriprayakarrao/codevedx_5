@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillPath | Training Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">LEARN • GROW • ACHIEVE</p>
+      <h1>Find your next skill.</h1>
+      <p class="subtitle">Tell us what you know and what interests you. SkillPath will suggest useful training courses.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="panel">
+      <h2>Get training recommendations</h2>
+      <form method="POST">
+        <label for="skills">Your current skills</label>
+        <input id="skills" name="skills" value="{{ skills }}" placeholder="Example: Python, communication, SQL">
+        <label for="interest">What do you want to learn?</label>
+        <input id="interest" name="interest" value="{{ interest }}" placeholder="Example: data analytics, web development">
+        <label for="level">Your learning level</label>
+        <select id="level" name="level">
+          {% for option in ["Beginner", "Intermediate", "Advanced"] %}
+          <option value="{{ option }}" {% if level == option %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit">Recommend training →</button>
+      </form>
+      {% if message %}<p class="message">{{ message }}</p>{% endif %}
+    </section>
+
+    {% if recommendations %}
+    <section class="results">
+      <h2>Recommended training</h2>
+      <p class="muted">Top matches based on your skills, interests and selected level.</p>
+      <div class="cards">
+        {% for item in recommendations %}
+        <article class="course">
+          <div class="course-top"><span class="tag">{{ item.category }}</span><span class="match">{{ item.match }}% match</span></div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <div class="meta"><span>📘 {{ item.level }}</span><span>⏱ {{ item.duration }}</span></div>
+          <p class="skills"><strong>Skills:</strong> {{ item.skills }}</p>
+          <a href="{{ item.url }}" target="_blank" rel="noopener">Explore training ↗</a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    <footer>SkillPath · Training Recommendation System · Built with Python (no scikit-learn)</footer>
+  </main>
+</body>
+</html>

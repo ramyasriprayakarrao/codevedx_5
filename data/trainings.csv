@@ -1,0 +1,11 @@
+title,category,skills,level,duration,description,url
+Python Programming,Programming,"python coding logic variables functions",Beginner,4 weeks,"Learn Python fundamentals and problem solving.",https://www.python.org/about/gettingstarted/
+Web Development,Development,"html css javascript frontend website",Beginner,6 weeks,"Build responsive websites using HTML CSS and JavaScript.",https://developer.mozilla.org/en-US/docs/Learn
+Data Analytics,Data,"python sql excel statistics visualization",Beginner,5 weeks,"Analyze data and create useful reports and dashboards.",https://www.kaggle.com/learn
+Machine Learning Fundamentals,AI,"python machine learning model evaluation data",Intermediate,6 weeks,"Understand machine learning concepts and practical workflows.",https://developers.google.com/machine-learning
+SQL and Database Management,Database,"sql database queries joins tables",Beginner,3 weeks,"Learn SQL queries, joins, grouping and database design.",https://www.w3schools.com/sql/
+Java Programming,Programming,"java object oriented programming classes",Beginner,5 weeks,"Learn Java syntax, object-oriented programming and applications.",https://dev.java/learn/
+Cloud Computing,Cloud,"cloud aws azure deployment infrastructure",Intermediate,4 weeks,"Explore cloud services, deployment and infrastructure basics.",https://aws.amazon.com/training/
+Cybersecurity Basics,Security,"security networking privacy threats ethical hacking",Beginner,4 weeks,"Learn security principles, common threats and safe practices.",https://www.cisa.gov/resources-tools
+UI UX Design,Design,"ui ux design wireframes prototyping research",Beginner,3 weeks,"Practice user research, wireframing and interface design.",https://www.figma.com/resource-library/
+Power BI Dashboards,Data,"power bi data visualization dashboard analytics",Intermediate,3 weeks,"Create interactive dashboards and business reports.",https://learn.microsoft.com/en-us/training/powerplatform/power-bi/
